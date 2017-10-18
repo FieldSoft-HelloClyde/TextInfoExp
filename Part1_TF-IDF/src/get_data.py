@@ -14,7 +14,7 @@ sys.setdefaultencoding("utf-8")
 
 # path='/home/mbtrec/mhwang/pro/computer/'
 base_path = GrobalParament.path
-path = base_path + 'data/computer/'# 原始数据
+path = base_path + 'data/computer/'  # 原始数据
 path1 = base_path + 'data/title_and_abs/'  # 处理后的标题和摘要
 newpath = base_path + 'data/pro_keyword/'
 newpath2 = base_path + 'data/keyword/'
@@ -70,7 +70,7 @@ def get_keyword():
             if value.count("基金项目") > 0 or value.count("机标分类号") > 0 or value.count("机标关键词") > 0 or value.count(
                     "基金项目") > 0 or value.count("DOI") > 0:
                 end = num
-            if num > begin and num < end and value[:-1].strip():
+            if begin < num < end and value[:-1].strip():
                 f2.write(value.strip())
                 f2.write(" ")
         f1.close()

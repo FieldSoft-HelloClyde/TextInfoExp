@@ -1,16 +1,16 @@
 # encoding:utf-8
 
-import sys
-import jieba
-import string
 import re
+import sys
 from collections import Counter
+
+import jieba
 
 reload(sys)
 sys.setdefaultencoding('utf-8')  # 设置默认编码为utf-8
 
 
-## 计算词频的例子
+# 计算词频的例子
 def com_tf():
     f = open('data/7s.txt', 'r')
     data = f.read()
@@ -24,12 +24,12 @@ def com_tf():
 
     open('data/7temp.txt', 'w').write(data3)  # 分词结果写入7temp.txt
 
-    wlist = data3.split()      # 将分词结果按空格切割为列表（字符串的切割）
+    wlist = data3.split()  # 将分词结果按空格切割为列表（字符串的切割）
     num_dict = Counter(wlist)  # 统计词频
 
     # 统计结果写入result.txt(字典的遍历)
     for (k, v) in num_dict.items():
-        open('data/result.txt', 'a+').write(str(k) + ' ' + str(v) + '\n')   # 将k，v转换为str类型
+        open('data/result.txt', 'a+').write(str(k) + ' ' + str(v) + '\n')  # 将k，v转换为str类型
 
 
 if __name__ == '__main__':

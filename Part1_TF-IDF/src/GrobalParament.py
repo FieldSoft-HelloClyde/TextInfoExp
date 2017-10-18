@@ -16,7 +16,7 @@ PreprocessResultName = "pro_res.txt"  # 预处理文件名
 ResultFileNameDir = "title_and_abs"  # 搜索结果文件目录
 ResultFileName = "result.txt"  # 搜索结果文件名
 
-path = '/home/kaifun/PycharmProjects/TextInfoExp/Part1_TF-IDF/'  # 原始数据
+path = 'D:/project/TextInfoExp/Part1_TF-IDF/'  # 原始数据
 path1 = path + 'data/title_and_abs/'
 newpath = path + "data/pro_keyword/"
 newpath2 = path
